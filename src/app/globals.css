@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif; */ /* Removed Geist font reference */
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 0%; /* Black */
+    --foreground: 0 0% 93%; /* Light Gray */
+
+    --card: 0 0% 7%; /* Dark Gray (slightly lighter than background) */
+    --card-foreground: 0 0% 93%; /* Light Gray */
+
+    --popover: 0 0% 5%; /* Very Dark Gray */
+    --popover-foreground: 0 0% 93%; /* Light Gray */
+
+    --primary: 190 95% 43%; /* Electric Cyan #06B6D4 - Retained */
+    --primary-foreground: 215 32% 18%; /* Deep Midnight Blue for text on primary - Retained */
+
+    --secondary: 0 0% 10%; /* Dark Gray */
+    --secondary-foreground: 0 0% 93%; /* Light Gray */
+
+    --muted: 0 0% 10%; /* Dark Gray */
+    --muted-foreground: 0 0% 70%; /* Dimmer Gray */
+
+    --accent: 190 95% 43%; /* Electric Cyan #06B6D4 - Retained */
+    --accent-foreground: 215 32% 18%; /* Deep Midnight Blue for text on accent - Retained */
+
+    --destructive: 0 63% 50%; /* Adjusted red for better visibility on dark theme - Retained */
+    --destructive-foreground: 0 0% 98%; /* Almost White */
+
+    --border: 0 0% 14%; /* Slightly Lighter Dark Gray */
+    --input: 0 0% 14%; /* Slightly Lighter Dark Gray */
+    --ring: 190 95% 43%; /* Electric Cyan for focus rings - Retained */
+
+    --radius: 0.5rem;
+
+    /* Sidebar specific vars, updated to match the new black theme */
+    --sidebar-background: 0 0% 7%; /* Dark Gray (same as card) */
+    --sidebar-foreground: 0 0% 93%; /* Light Gray */
+    --sidebar-primary: 190 95% 43%; /* Retained - matches main primary */
+    --sidebar-primary-foreground: 215 32% 18%; /* Retained - matches main primary-foreground */
+    --sidebar-accent: 0 0% 10%; /* Dark Gray (same as secondary) */
+    --sidebar-accent-foreground: 0 0% 93%; /* Light Gray */
+    --sidebar-border: 0 0% 14%; /* Slightly Lighter Dark Gray */
+    --sidebar-ring: 190 95% 43%; /* Retained - matches main ring */
+
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  /* Remove .dark specific overrides as dark is the default theme now */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
